@@ -25,7 +25,7 @@ header {
 
 .grid {
   display: grid;
-  grid-gap: 64px;
+  grid-gap: 30px;
 }
 
 .img-responsive {
@@ -37,8 +37,8 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
-.grid-3-columns {
-  grid-template-columns: 1fr 1fr 1fr;
+.grid.grid-3-columns {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .grid.grid-3-columns-with-first-narrow {
