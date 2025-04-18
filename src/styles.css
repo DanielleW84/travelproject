@@ -29,7 +29,7 @@ header {
 }
 
 .img-responsive {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -45,9 +45,27 @@ header {
   grid-template-columns: 1fr 2fr 2fr;
 }
 
+.embed {
+  width: 100%;
+  aspect-ratio: 1 /1;
+}
+
 .card {
   background: white;
   margin: 30px 0;
+}
+
+.card-header.grid {
+  grid-gap: 0;
+}
+
+.card-header.grid.grid-2-columns > * {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-header.grid.grid-2-columns {
+  align-items: stretch;
 }
 
 .card-body {
@@ -70,6 +88,12 @@ header {
   padding: 16px;
   background-color: #462cb3;
   text-decoration: none;
+}
+
+.button:hover {
+  background-color: #34208a;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
 }
 
 section {
@@ -123,7 +147,7 @@ main {
   background-color: white;
 }
 main h2 {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 5px;
@@ -161,7 +185,7 @@ main p {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.5;
   opacity: 0.7;
 }
 
@@ -237,7 +261,19 @@ footer a {
   .grid {
     grid-gap: 32px;
   }
+
   section {
     padding: 30px;
+  }
+
+  .grid.grid-3-columns {
+    grid-template-columns: 1fr;
+  }
+  .card-header img {
+    display: none;
+  }
+
+  .embed {
+    aspect-ratio: 16/9;
   }
 }
